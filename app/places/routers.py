@@ -2,9 +2,9 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from typing import List
 from app.dependencies.dao_dep import get_db
-from place_dao import PlaceDAO
-from .schemas import PlaceCreate, PlaceRead
-from .yandex_maps import search_places, extract_places
+from app.places.place_dao import PlaceDAO
+from app.places.schemas import PlaceCreate, PlaceRead
+from app.places.yandex_maps import search_places, extract_places
 
 router = APIRouter(
     prefix="/places",
